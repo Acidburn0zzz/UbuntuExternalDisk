@@ -12,3 +12,39 @@ edit the refind configuration file /efi/refind/refind.conf (the line you're look
 on reboot, you should now be greeted with a menu containing a ubuntu, Mac and Windows logo (you can press esc to refresh the list, as external drives can take some time to show up; you can configure refind to pause befaure showing hte menu)
 
 Ignore the Windows part if we don’t care about creating a dual boot OS X and Windows on the internal SSD.
+
+## STEP 1
+
+OS X SAT SMART Driver
+#####################
+
+This is a kernel driver for Mac OS X external USB or FireWire drives.
+It extends the standard driver behaviour by providing access to drive
+SMART data. The interface to SMART data is same as with ATA family
+driver, so most existing applications should work. The driver requires
+a SAT (SCSI ATA Translation) capable external drive enclosure.
+
+The driver consists of a kernel extension and a user client interface
+library.
+
+The code is based on Apple opensource files and is therefore published
+under Apple Public Source License. For details see
+http://www.opensource.apple.com/license/apsl/
+
+Install
+=======
+
+ * Use the dmg image and the installer
+ * Power cycle the external drives
+ * Check DiskUtility. The disk should have "S.M.A.R.T. Status: Verified"
+
+
+Uninstall
+=========
+
+ * Remove driver and plugin
+    sudo rm -r /System/Library/Extensions/SATSMARTDriver.kext
+    sudo rm -r /System/Library/Extensions/SATSMARTLib.plugin
+ * Reboot
+
+
