@@ -47,4 +47,8 @@ Uninstall
     sudo rm -r /System/Library/Extensions/SATSMARTLib.plugin
  * Reboot
 
+## STEP 2
+
+http://www.ubuntu.com/download/desktop/create-a-usb-stick-on-mac-osx
+
 
