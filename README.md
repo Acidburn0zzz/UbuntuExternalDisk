@@ -51,4 +51,12 @@ Uninstall
 
 http://www.ubuntu.com/download/desktop/create-a-usb-stick-on-mac-osx
 
+# STEP 3: Actually Install Ubuntu into our external Drive
 
+Reboot and hold the OPTION key.
+
+Reference - http://askubuntu.com/questions/604193/i8042-error-on-macbook-7-1
+For MacBookPro5,2 (2009 17”), we will get an error that says "8042: No controller found."
+The solution is simple to edit our grub command by hitting “e” and append "nomodeset" in front of "quiet".
+
+Once our Ubuntu LiveCD boots up, we can install it to our external disk by choosing the correct disk in the Installation Wizard.
