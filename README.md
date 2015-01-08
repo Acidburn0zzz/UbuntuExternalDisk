@@ -51,7 +51,7 @@ Uninstall
 
 http://www.ubuntu.com/download/desktop/create-a-usb-stick-on-mac-osx
 
-# STEP 3: Actually Install Ubuntu into our external Drive
+## STEP 3: Actually Install Ubuntu into our external Drive
 
 Reboot and hold the OPTION key.
 
@@ -60,3 +60,10 @@ For MacBookPro5,2 (2009 17”), we will get an error that says "8042: No control
 The solution is simple to edit our grub command by hitting “e” and append "nomodeset" in front of "quiet".
 
 Once our Ubuntu LiveCD boots up, we can install it to our external disk by choosing the correct disk in the Installation Wizard.
+
+## STEP 4: Download and Install Refind Boot Manager
+
+http://www.rodsbooks.com/refind/yosemite.html
+http://www.rodsbooks.com/refind/installing.html#nolinux
+
+http://sourceforge.net/projects/refind/  (I used 0.8.7 as of 21st June 2015)
